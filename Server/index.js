@@ -9,6 +9,9 @@ app.use(cors())
 app.use(express.json())
 mongoose.connect('mongodb://localhost:27017/firstWebApp');
 
+app.get("/", (req, res)=> {
+    res.send("Welcome to login page");
+})
 
 app.post('/api/register',(req,res)=>{
     console.log(req.body)
